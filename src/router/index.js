@@ -7,7 +7,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: '首頁'
+      }
     },
     {
       path: '/about',
@@ -15,7 +18,10 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: '關於我們'
+      }
     },
     {
       path: '/product',
@@ -28,7 +34,7 @@ const router = createRouter({
         },
         {
           path: 'productInfo1',
-          component: () => import('../views/productInfo1.vue')
+          component: () => import('../views/ProductInfo1.vue')
         },
       ]
     },
@@ -43,6 +49,12 @@ const router = createRouter({
       component: () => import('../views/NewPage.vue')
     }
   ]
+})
+// 頁面title顯示
+router.beforeEach(async (to, from) => {
+  if( to.meta && to.meta.title){
+      document.title = to.meta.title
+  }
 })
 
 export default router
