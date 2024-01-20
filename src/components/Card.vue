@@ -4,8 +4,7 @@
             <img src="https://picsum.photos/300/200/?random=10" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
+                <p class="card-text">CARD</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
