@@ -47,6 +47,11 @@ const router = createRouter({
       path: '/newPage',
       name: '新增頁面',
       component: () => import('../views/NewPage.vue')
+    },
+    {
+      path: '/productNew/:id',
+      name: '商品新頁面',
+      component: () => import('../views/ProductNew.vue')
     }
   ]
 })

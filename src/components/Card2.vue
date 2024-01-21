@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="jojo" class="card-img-top">
+        <img :src="imgUrl" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <h5 class="card-title">{{ Victor }}</h5>
@@ -16,12 +16,12 @@ export default {
         title: String,
         Victor: String,
         imgUrl: String,
-        jojo: String,
+    
 
     },
     data() {
         return {
-            jojo:'https://www.cup.com.hk/wp-content/uploads/2019/08/444e.jpg',
+            // jojo:'https://www.cup.com.hk/wp-content/uploads/2019/08/444e.jpg',
         }
     }
 }
