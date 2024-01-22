@@ -24,11 +24,11 @@
       >
         <div @click="goToProduct(item)">
           <div class="product_card_img">
-            <img :src="item.image" :alt="item.title">
+            <img :src="item.images" :alt="item.title">
           </div>
           <h6>{{ item.title  }}</h6>
           <div>
-            <p>{{ item.category  }}</p>
+            <p>{{ item.description  }}</p>
             <p>$ {{ item.price  }}</p>
           </div>
           <div v-if="item.rating">
@@ -106,19 +106,20 @@ export default {
     }
   },
   methods: {
-    fetchData() {
-      //使用fetch
-      fetch('https://fakestoreapi.com/products')
-        .then(res => res.json())
-        .then(json => {
-          this.responseData = json
-        })
-    },
+    // fetchData() {
+    //   //使用fetch
+    //   fetch('https://api.escuelajs.co/api/v1/products')
+    //     .then(res => res.json())
+    //     .then(json => {
+    //       this.responseData = json
+    //     })
+    // },
     axiosGetData() {
       //使用axios
-      axios.get('https://fakestoreapi.com/products')
+      axios.get('https://api.escuelajs.co/api/v1/products')
         .then(res => {
           if (res && res.data) {
+            console.log(res.data);
             this.responseData = res.data
             this.displayData = res.data
           }
