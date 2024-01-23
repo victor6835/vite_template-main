@@ -8,8 +8,9 @@ import router from './router'
 
 // 創建一個vue應用程式(主要配置在app.vue裡)
 const vueApp = createApp(App)
+const pinia = createPinia(vueApp)
 
-vueApp.use(createPinia())
+vueApp.use(pinia)
 vueApp.use(router)
 
 // 渲染在index.html裡面的div#app

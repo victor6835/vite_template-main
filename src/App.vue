@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/login">Login</RouterLink>
         <RouterLink to="/newPage">新增頁面</RouterLink>
         <RouterLink to="/productNew">商品新頁面</RouterLink>
+        <RouterLink to="/src/views/PiniaPractice.vue">Pinia練習</RouterLink>
       </nav>
     </div>
   </header>

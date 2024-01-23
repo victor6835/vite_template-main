@@ -52,6 +52,11 @@ const router = createRouter({
       path: '/productNew/:id',
       name: '商品新頁面',
       component: () => import('../views/ProductNew.vue')
+    },
+    {
+      path: '/piniaPractice',
+      name: 'pinia練習',
+      component: () => import('../views/PiniaPractice.vue')
     }
   ]
 })
